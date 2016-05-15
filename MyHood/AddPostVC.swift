@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AddPostVC: UIViewController {
+class AddPostVC: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
     @IBOutlet weak var mainImage: CircleImage!
     
@@ -16,15 +16,25 @@ class AddPostVC: UIViewController {
     
     @IBOutlet weak var enterDescription: UITextField!
     
+    var imagePicker : UIImagePickerController!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        imagePicker = UIImagePickerController()
+        imagePicker.delegate = self
+        
+    }
+    
+    func imagePickerController(picker: UIImagePickerController, didFinishPickingImage image: UIImage, editingInfo: [String : AnyObject]?) {
+        imagePicker.dismissViewControllerAnimated(true, completion: nil)
+        mainImage.image = image
     }
 
     @IBAction func AddImageAction(sender: UIButton) {
         
         sender.setTitle("", forState: .Normal)
+        presentViewController(imagePicker, animated: true, completion: nil)
     }
     
     @IBAction func postAction(sender: AnyObject) {
