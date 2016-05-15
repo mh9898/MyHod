@@ -16,6 +16,7 @@
 		7192809F1CE79F2B006763A8 /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7192809E1CE79F2B006763A8 /* PostCell.swift */; };
 		719280CA1CE8644C006763A8 /* AddPostVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719280C91CE8644C006763A8 /* AddPostVC.swift */; };
 		719280CC1CE86E23006763A8 /* CircleImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719280CB1CE86E23006763A8 /* CircleImage.swift */; };
+		719280CF1CE8B155006763A8 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719280CE1CE8B155006763A8 /* DataService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		7192809E1CE79F2B006763A8 /* PostCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
 		719280C91CE8644C006763A8 /* AddPostVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddPostVC.swift; sourceTree = "<group>"; };
 		719280CB1CE86E23006763A8 /* CircleImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleImage.swift; sourceTree = "<group>"; };
+		719280CE1CE8B155006763A8 /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 			isa = PBXGroup;
 			children = (
 				7192808A1CE751D0006763A8 /* AppDelegate.swift */,
+				719280CD1CE8B065006763A8 /* Services */,
 				719280C81CE863E0006763A8 /* Controller */,
 				719280A01CE79F3F006763A8 /* Model */,
 				719280A11CE79F4F006763A8 /* View */,
@@ -98,6 +101,14 @@
 				719280CB1CE86E23006763A8 /* CircleImage.swift */,
 			);
 			name = Controller;
+			sourceTree = "<group>";
+		};
+		719280CD1CE8B065006763A8 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				719280CE1CE8B155006763A8 /* DataService.swift */,
+			);
+			name = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -172,6 +183,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7192809D1CE75550006763A8 /* Post.swift in Sources */,
+				719280CF1CE8B155006763A8 /* DataService.swift in Sources */,
 				7192808D1CE751D0006763A8 /* ViewController.swift in Sources */,
 				719280CA1CE8644C006763A8 /* AddPostVC.swift in Sources */,
 				7192808B1CE751D0006763A8 /* AppDelegate.swift in Sources */,
