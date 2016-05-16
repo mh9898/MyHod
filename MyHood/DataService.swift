@@ -36,7 +36,7 @@ class DataService {
             }
             
         }
-        
+        //listen to the array and let me konw when it have objects
         NSNotificationCenter.defaultCenter().postNotification(NSNotification(name: "postLoadedNotfaction", object: nil))
     }
     
@@ -48,11 +48,34 @@ class DataService {
         
     }
     
-    func saveImageCreatePath(image: UIImage){
+    //convert the image to data and create uniqe path
+    func saveImageCreatePath(image: UIImage) -> String{
+        let imageData = UIImagePNGRepresentation(image)
+        //uniqe image path
+        let imagePath = "image\(NSDate.timeIntervalSinceReferenceDate()).png"
+        let fullPath = documentsPathForFileName(imagePath)
+        //save the image
+        imageData?.writeToFile(fullPath, atomically: true)
+        return imagePath
         
     }
     
-    func retriveImageForPath(path: String){
+    func retriveImageForPath(path: String)-> UIImage?{
+        let fullPath = documentsPathForFileName(path)
+        let image = UIImage(named: fullPath)
+        return image
+    }
+    
+    
+    
+    //funcation to get path to the photos
+                                //myImg.png
+    func documentsPathForFileName(name: String) -> String {
+        //get the path dir of the file
+        let paths = NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.DocumentDirectory, NSSearchPathDomainMask.UserDomainMask, true)
+        let fullPath = paths[0] as NSString
+        return fullPath.stringByAppendingPathComponent(name)
+        
         
     }
     
