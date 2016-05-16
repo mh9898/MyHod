@@ -21,6 +21,8 @@ class ViewController: UIViewController,UITableViewDataSource, UITableViewDelegat
         tableView.delegate = self
         tableView.dataSource = self
         
+        DataService.instance.loadPosts()
+        
 //        let post1 = Post(imgPath: "", title: "post1", desc: "desc post1")
 //        let post2 = Post(imgPath: "", title: "post2", desc: "desc post2")
 //        let post3 = Post(imgPath: "", title: "post3", desc: "desc post3")

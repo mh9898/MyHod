@@ -24,6 +24,7 @@ class DataService {
         let postData = NSKeyedArchiver.archivedDataWithRootObject(_loadedPost)
         //saving//setting the data / as dictionery in standart user defualts
         NSUserDefaults.standardUserDefaults().setObject(postData, forKey: "posts")
+        NSUserDefaults.standardUserDefaults().synchronize()
     }
 
     

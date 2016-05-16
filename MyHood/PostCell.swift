@@ -21,6 +21,7 @@ class PostCell: UITableViewCell {
     }
     
     func confgCell(post: Post){
+        imgCell.image = DataService.instance.retriveImageForPath(post.imgPath)
         titleCell.text = post.title
         descCell.text = post.desc
     }
